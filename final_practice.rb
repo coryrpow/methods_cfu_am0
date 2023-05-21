@@ -67,31 +67,23 @@ p square(8)
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
 
 def check_stock(num, item)
-    if num >= 4 && item
-        puts "Coffee is stocked."
+    if num == 0
+        "#{item} - OUT of stock!"
+    elsif num >= 4
+        "#{item} is stocked!"
+    else
+        "#{item} - running LOW"
     end
 end
 
 check_stock(4, "Coffee");
 # => "Coffee is stocked"
-def check_stock(num, item)
-    if num <= 3 && item
-        puts "Tortillas - running LOW"
-    end
-end
+
 check_stock(3, "Tortillas");
 # => "Tortillas - running LOW"
-def check_stock(num, item)
-    if num == 0 && item
-        puts "Cheese - OUT of stock!"
-    end
-end
+
 check_stock(0, "Cheese");
 # => "Cheese - OUT of stock!"
-def check_stock(num, item)
-    if num <= 1 && item
-        puts "Salsa - running LOW"
-    end
-end
+
 check_stock(1, "Salsa");
 # => "Salsa - running LOW"
